@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+psycopg2-binary = "*"
+tox = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
+python-decouple = "*"
+django-debug-toolbar = "*"
+black = "*"
+django-compressor = "*"
+
+[dev-packages]
+faker = "*"
+factory-boy = "*"
+pytest = "*"
+coverage = "*"
+autopep8 = "*"
+django-debug-toolbar = "*"
+django-extensions = "*"
+pytest-cov = "*"
+pytest-django = "*"
+pre-commit = "*"
+isort = "*"
+flake8 = "*"
+
+[pipenv]
+allow_prereleases = false
