@@ -38,7 +38,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'app.configs.urls'
+ROOT_URLCONF = 'grados.configs.urls'
 
 TEMPLATES = [
     {
@@ -56,7 +56,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'app.configs.wsgi.application'
+WSGI_APPLICATION = 'grados.configs.wsgi.application'
 
 
 # Database
