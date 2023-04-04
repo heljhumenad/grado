@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUsers, UserManager
+from django.contrib.auth.models import UserManager, AbstractUser
 from django.utils.translation import gettext as _
 
 # Create your models here.
@@ -7,8 +7,8 @@ from django.utils.translation import gettext as _
 class CustomUserManager(UserManager):
     pass # check if whats the use of UserManager
 
-class CustomUser(AbstractUsers):
-    # check if what's new of the AbstractUser class
+class CustomUser(AbstractUser):
+# check if what's new of the AbstractUser class
     object = CustomUserManager()
 
     @property
