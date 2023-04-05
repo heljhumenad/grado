@@ -4,5 +4,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("accounts/", include('grados.app.accounts.urls')),
     path("__debug__", include(debug_toolbar.urls)),  # Debug purposes
 ]

@@ -2,6 +2,7 @@
 from .base import *
 
 AUTH_USER_MODEL = "accounts.CustomUser"
+LOGIN_REDIRECT_URL = "accounts:dashboard_view"
 INSTALLED_APPS += [
     "django_extensions",
     "debug_toolbar"

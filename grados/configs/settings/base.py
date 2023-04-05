@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 from decouple import config
@@ -116,11 +117,16 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
-STATIC_URL = 'static/'
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
+# TODO: FIX THE  PROBLEM OF STATIC FILES THAT DOESNT LOAD PROPERLY
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_URL = '/static/'
 
 STATICFILES_DIR = [
-    BASE_DIR / 'static'
+    os.path.join(BASE_DIR, 'static')
 ]
 
 # Default primary key field type
@@ -130,3 +136,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Default application path so that you can configure this constant
 DEFAULT_APPS_PATH = 'grados.app.'
+
+
+# Do not store cookies when browser close
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
