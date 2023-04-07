@@ -1,14 +1,14 @@
 {% if form.errors %}
-<!-- {% for field in form %} -->
-    <!-- {% for error in field.errors %} -->
-        <div class="alert alert-danger">
+ <!-- {% for field in form %} 
+     {% for error in field.errors %} 
+         <div class="alert alert-danger">
             <strong class="has-text-danger">{{ form.errors}}</strong>
-        </div> 
-    <!-- {% endfor %} -->
-<!-- {% endfor %} -->
-<!-- {% for error in form.non_field_errors %}
+        </div>  
+     {% endfor %} 
+ {% endfor %}  -->
+ {% for error in form.non_field_errors %}
     <div class="alert alert-danger">
         <strong class="has-text-danger">{{ error|escape }}</strong>
     </div>
-{% endfor %} -->
-{% endif %}
+{% endfor %}
+ {% endif %} 
