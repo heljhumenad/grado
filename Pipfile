@@ -13,6 +13,7 @@ python-decouple = "*"
 django-debug-toolbar = "*"
 black = "*"
 django-compressor = "*"
+django-bootstrap5 = "*"
 
 [dev-packages]
 faker = "*"
