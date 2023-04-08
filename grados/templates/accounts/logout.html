@@ -1,15 +1,15 @@
 {% extends "common/base.html" %}
 {% load i18n %}
-
-{% block login_form %}
-		<div class="row" style="margin-top:100px">
-				<div class="col-md-12">
-						<h3 class="text-muted">{% trans 'Logged Out' %}
-								<i class="fa fa-exclamation-circle fa-lg text-success"></i></h3>
-			<p class="lead text-success">
-			{% trans "Thank you for spending some time in the site you can comeback just follow the link" %}
-		</p>
-		<a href="{% url 'accounts:accounts_login'%}" class="btn btn-danger">{% trans "Login" %}</a>
-	</div>
-	</div>
-{% endblock login_form %}
+{% block title %} {% trans "Logout" %} {% endblock title %}
+{% block logout_hero %}
+<div class="px-4 py-5 my-5 text-center">
+	<i class="fa-solid fa-triangle-exclamation fa-2xl" style="color: #ff7800;"></i>
+    <h1 class="display-5 fw-bold">{% trans "You already Loggged Out!!" %}</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">{% trans "Thank you again for using Grado Grading and Notification System. We are grateful for your time and look forward to continuing to use it in the future." %}</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="{% url 'accounts:accounts_login' %}" class="btn btn-danger btn-lg px-5 gap-3">{% trans "Login Again" %}</a>
+      </div>
+    </div>
+  </div>
+{% endblock logout_hero %}
