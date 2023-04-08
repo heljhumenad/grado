@@ -9,7 +9,10 @@ from grados.app.accounts.models import CustomUser
 class AccountTemplateView(views.LoginView):
     template_name = "accounts/login.html"
 
+class AccountLogoutView(views.LogoutView):
+    template_name = "accounts/logout.html"
+
 class DashboardTemplateView(LoginRequiredMixin, TemplateView):
-    login_url = reverse_lazy("login")
+    login_url = reverse_lazy("accounts:accounts_login")
     template_name = "accounts/dashboard.html"
     redirect_field_name = "next_link"
