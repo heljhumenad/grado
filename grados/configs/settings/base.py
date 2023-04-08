@@ -30,6 +30,9 @@ INSTALLED_APPS = [
 
     # Custom Apps
     'grados.app.accounts',
+
+    # Third Party Applications
+    'django_bootstrap5',
 ]
 
 MIDDLEWARE = [
