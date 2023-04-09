@@ -8,7 +8,7 @@ from grados.app.forms.accountsForm import CustomAuthenticationForm
 
 class AccountTemplateView(views.LoginView):
     template_name = "accounts/login.html"
-    form_class = CustomAuthenticationForm
+    authentication_form = CustomAuthenticationForm
 
 class AccountLogoutView(LoginRequiredMixin, views.LogoutView):
     template_name = "accounts/logout.html"
