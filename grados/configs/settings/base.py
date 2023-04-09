@@ -30,7 +30,7 @@ INSTALLED_APPS = [
 
     # Custom Apps
     'grados.app.accounts',
-
+    'grados.app.forms',
     # Third Party Applications
     'django_bootstrap5',
 ]
