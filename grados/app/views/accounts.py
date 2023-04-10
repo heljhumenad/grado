@@ -1,10 +1,10 @@
-from django.views.generic import TemplateView
-from django.urls import reverse_lazy
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import views
-
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.urls import reverse_lazy
+from django.views.generic import TemplateView
 from grados.app.accounts.models import CustomUser
 from grados.app.forms.accountsForm import CustomAuthenticationForm
+
 
 class AccountTemplateView(views.LoginView):
     template_name = "accounts/login.html"

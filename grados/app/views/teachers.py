@@ -1,7 +1,8 @@
-from django.views.generic import TemplateView
-from django.urls import reverse_lazy
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import views
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.urls import reverse_lazy
+from django.views.generic import TemplateView
+
 
 # TODO: Create a mixins for all LoginRequiredMixin
 class TeachersTemplateView(LoginRequiredMixin, TemplateView):
