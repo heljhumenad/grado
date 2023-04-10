@@ -8,8 +8,6 @@ from grados.app.accounts.models import CustomUser
 @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):
     model = get_user_model
-    # add_form = forms.CustomUserCreationForm
-    # form = forms.CustomUserChangeForm
     list_display = [
         'first_name', 'last_name',
         'email', 'username',
