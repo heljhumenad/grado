@@ -32,6 +32,8 @@ INSTALLED_APPS = [
     'grados.app.accounts',
     'grados.app.teachers',
     'grados.app.forms',
+    # Core util
+    'grados.app.core',
     # Third Party Applications
     'django_bootstrap5',
 ]
