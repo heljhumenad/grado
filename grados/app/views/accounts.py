@@ -3,7 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 from grados.app.accounts.models import CustomUser
-from grados.app.forms.accountsForm import CustomAuthenticationForm
+from grados.app.forms.accounts_form import CustomAuthenticationForm
 
 
 class AccountTemplateView(views.LoginView):

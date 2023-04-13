@@ -3,7 +3,7 @@ from django.utils.translation import gettext as _
 
 from grados.app.core.models import TimeStampModel
 
-class Teacher(TimeStampModel):
+class Teacher(models.Model, TimeStampModel):
 
     LIFE_DESIGNATION = (
         ('mr.', 'Mr.'),
@@ -46,9 +46,11 @@ class Teacher(TimeStampModel):
 
     )
 
-
     class Meta:
         db_table = _('teachers')
         verbose_name = _('Teacher')
         verbose_name_plural = _('Teachers')
         ordering = ['id']
+
+    def __str__(self):
+        return "%s %s" % (self.first_name, self.last_name)
