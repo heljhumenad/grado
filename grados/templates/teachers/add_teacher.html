@@ -1,0 +1,35 @@
+{% extends 'common/base.html' %}
+{% load i18n django_bootstrap5 %}
+
+{% block title %}Add Teacher {% endblock title %}
+{% block navbar %}
+    {% include 'common/navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+</section>
+<section class="content">
+<div class="container-fluid">
+    <div class="card card-default">
+        <div class="card-body">
+           <form action="" method="POST">
+                {% csrf_token %}
+                {% bootstrap_form form  %}
+                        <div class="col">
+                            <label for=""></label>
+                            <button type="submit" class="btn btn-primary btn-block" id="submit-button">{% trans "Save" %}</button>
+                        </div>
+                        <div class="col">
+                            <label for=""></label>
+                            <button type="submit" class="btn btn-success btn-block" id="submit-button">{% trans "Update" %}</button>
+                        </div>
+                <div class="col">
+                    <label for=""></label>
+                    <a href="{% url 'teachers:teachers_index' %}" class="btn btn-danger btn-block">{% trans "Cancel" %}</a>
+                </div>
+         </div>
+            </form>
+    </div>
+</div>
+</section>
+{% endblock content %}
