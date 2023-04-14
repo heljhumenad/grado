@@ -10,8 +10,6 @@ class TeacherForms(forms.ModelForm):
         verbose_plural_name = _('Teachers Forms')
         model = Teacher
         fields = [
-            'first_name',
-            'last_name',
             'address1',
             'address2',
             'birth_date',

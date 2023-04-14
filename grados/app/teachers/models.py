@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import gettext as _
 
 from grados.app.core.models import TimeStampModel
+from grados.app.accounts.models import CustomUser
 
 class Teacher(models.Model, TimeStampModel):
 
@@ -11,17 +12,22 @@ class Teacher(models.Model, TimeStampModel):
         ('ms.', 'Miss')
     )
 
-    first_name = models.CharField(
-        max_length = 200,
-        verbose_name = _('First Name'),
-        blank = False,
+    teacher_accounts_id = models.ForeignKey(
+        CustomUser,
+        on_delete = models.CASCADE,
+        verbose_name = _('Teacher Acccount')
     )
+    # first_name = models.CharField(
+    #     max_length = 200,
+    #     verbose_name = _('First Name'),
+    #     blank = False,
+    # )
 
-    last_name = models.CharField(
-        max_length = 200,
-        verbose_name = _('Last Name'),
-        blank = False,
-    )
+    # last_name = models.CharField(
+    #     max_length = 200,
+    #     verbose_name = _('Last Name'),
+    #     blank = False,
+    # )
     
     address1 = models.CharField(
         max_length = 200,
@@ -53,4 +59,5 @@ class Teacher(models.Model, TimeStampModel):
         ordering = ['id']
 
     def __str__(self):
-        return "%s %s" % (self.first_name, self.last_name)
+        # return "%s %s" % (self.teacher_accounts_id.first_name, self.teacher_accounts_id.last_name)
+        return "%s" % (self.birth_date)

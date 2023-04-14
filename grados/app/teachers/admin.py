@@ -7,6 +7,7 @@ from grados.app.teachers.models import Teacher
 class TeacherAdmin(admin.ModelAdmin):
     model = Teacher
     list_display = [
-        'first_name', 'last_name', 'birth_date'
+        'birth_date',
+        'teacher_accounts_id'
     ]
 
