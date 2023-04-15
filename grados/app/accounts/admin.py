@@ -4,7 +4,6 @@ from django.contrib.auth.admin import UserAdmin
 
 from grados.app.accounts.models import CustomUser
 
-# Register your models here.
 @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):
     model = get_user_model

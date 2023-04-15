@@ -17,18 +17,7 @@ class Teacher(models.Model, TimeStampModel):
         on_delete = models.CASCADE,
         verbose_name = _('Teacher Acccount')
     )
-    # first_name = models.CharField(
-    #     max_length = 200,
-    #     verbose_name = _('First Name'),
-    #     blank = False,
-    # )
 
-    # last_name = models.CharField(
-    #     max_length = 200,
-    #     verbose_name = _('Last Name'),
-    #     blank = False,
-    # )
-    
     address1 = models.CharField(
         max_length = 200,
         verbose_name = _('Address 1'),
@@ -59,5 +48,4 @@ class Teacher(models.Model, TimeStampModel):
         ordering = ['id']
 
     def __str__(self):
-        # return "%s %s" % (self.teacher_accounts_id.first_name, self.teacher_accounts_id.last_name)
         return "%s" % (self.birth_date)
