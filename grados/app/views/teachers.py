@@ -16,3 +16,8 @@ class TeacherCreateView(LoginRequiredMixin, CreateView):
     form_class = teachers_form.TeacherForms
     success_url = reverse_lazy('teachers:teachers_index')
     login_url = reverse_lazy('accounts:accounts_login')
+
+    # save the current logged-in user to the teacher model instance
+    def form_valid(self, form):
+        form.instance.teacher_accounts_id = self.request.user
+        return super().form_valid(form)
