@@ -14,14 +14,14 @@
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
+		{% block navbar %} {% endblock navbar %}
     <div class="container-fluid" style="padding-left:0">
-        {% block content %}{% endblock content %}
-        {% block sidebar %}{% endblock sidebar %}
-        {% block navbar %} {% endblock navbar %}
-        <div class="login-form">
+         {% block sidebar %}{% endblock sidebar %}
+       <div class="login-form">
         {% block login_form %} {% endblock login_form %}
-        </div>
     </div>
+	
+    {% block content %}{% endblock content %}
     {% block logout_hero %}{% endblock logout_hero %}
     {% block indevelopment %}{% endblock indevelopment %}
 <script src="{% static 'js/bootstrap.bundle.js' %}"></script>

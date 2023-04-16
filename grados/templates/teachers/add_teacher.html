@@ -7,29 +7,18 @@
 {% endblock navbar %}
 
 {% block content %}
-</section>
-<section class="content">
-<div class="container-fluid">
-    <div class="card card-default">
-        <div class="card-body">
-           <form action="" method="POST">
-                {% csrf_token %}
-                {% bootstrap_form form  %}
-                        <div class="col">
-                            <label for=""></label>
-                            <button type="submit" class="btn btn-primary btn-block" id="submit-button">{% trans "Save" %}</button>
-                        </div>
-                        <div class="col">
-                            <label for=""></label>
-                            <button type="submit" class="btn btn-success btn-block" id="submit-button">{% trans "Update" %}</button>
-                        </div>
-                <div class="col">
-                    <label for=""></label>
-                    <a href="{% url 'teachers:teachers_index' %}" class="btn btn-danger btn-block">{% trans "Cancel" %}</a>
-                </div>
-         </div>
-            </form>
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-body">
+        <form action="" method="POST">
+          <div class="mb-3">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
     </div>
-</div>
-</section>
+  </div>
+  
 {% endblock content %}
