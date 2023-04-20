@@ -1,0 +1,7 @@
+{% load django_bootstrap5 i18n %}    
+<form action ="" method="POST">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button class="btn btn-success btn-md" type="submit">{% trans "Save" %}</button>
+        <button class="btn btn-danger btn-md" type="submit">{% trans "Cancel" %}</button>
+</form>
