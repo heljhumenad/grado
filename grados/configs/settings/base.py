@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     # Custom Apps
     'grados.app.accounts',
     'grados.app.teachers',
+    'grados.app.students',
     'grados.app.forms',
     # Core util
     'grados.app.core',
