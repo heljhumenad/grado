@@ -8,15 +8,18 @@ from django.views.generic import (
 
 from grados.app.teachers.models import Teacher
 from grados.app.forms import teachers_form
-from grados.app.mixin.messagemixin import SuccessMessageMixin
+from grados.app.mixin.messagemixin import MessageMixins
 
-class TeachersTemplateView(SuccessMessageMixin, TemplateView):
+class TeachersTemplateView(MessageMixins, TemplateView):
     template_name = 'teachers/index.html'
 
 
-class TeacherCreateView(SuccessMessageMixin, CreateView):
+class TeacherCreateView(MessageMixins, CreateView):
     template_name = 'teachers/add_teacher.html'
     form_class = teachers_form.TeacherForms
+    field_name = "object.designation_as"
+    messages = "added"
+    success_url = reverse_lazy('teachers:teachers_add') # redirect and show messages
 
     # save the current logged-in user to the teacher model instance
     def form_valid(self, form):
@@ -24,5 +27,5 @@ class TeacherCreateView(SuccessMessageMixin, CreateView):
         return super().form_valid(form)
     
 
-class TeacherUpdateView(SuccessMessageMixin, UpdateView):
+class TeacherUpdateView(MessageMixins, UpdateView):
     pass
