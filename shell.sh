@@ -1,1 +1,1 @@
-python manage.py runserver 5000
+python manage.py runserver_plus 5000
