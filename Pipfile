@@ -14,6 +14,7 @@ django-debug-toolbar = "*"
 black = "*"
 django-compressor = "*"
 django-bootstrap5 = "*"
+werkzeug = "*"
 
 [dev-packages]
 faker = "*"
