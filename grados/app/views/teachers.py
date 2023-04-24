@@ -17,7 +17,6 @@ class TeachersTemplateView(MessageMixins, TemplateView):
 class TeacherCreateView(MessageMixins, CreateView):
     template_name = 'teachers/add_teacher.html'
     form_class = teachers_form.TeacherForms
-    field_name = "object.designation_as"
     messages = "added"
     success_url = reverse_lazy('teachers:teachers_add') # redirect and show messages
 
