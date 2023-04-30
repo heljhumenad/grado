@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'grados.app.accounts',
     'grados.app.teachers',
     'grados.app.students',
+    'grados.app.parents',
     'grados.app.forms',
     # Core util
     'grados.app.core',

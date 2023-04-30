@@ -3,10 +3,10 @@ from django.utils.translation import gettext as _
 
 from grados.app.core.models import TimeStampModel
 from grados.app.teachers.models import Teacher
-from grados.app.parents.models import Parent
+from grados.app.parents.models import Parents
 
 # TODO: Create normalize table for students and teacher
-class Student(model.Model, TimeStampModel):
+class Student(models.Model, TimeStampModel):
     
     teacher_id = models.ForeignKey(
         Teacher,
@@ -15,13 +15,12 @@ class Student(model.Model, TimeStampModel):
     )
     
     parent_id = models.ForeignKey(
-        Parent,
+        Parents,
         on_delete = models.CASCADE,
         verbose_name = _('Parents')
     )
 
     age = models.SmallIntegerField(
-        max_length = 100,
         verbose_name = _('Age'),
         blank = False
     )
