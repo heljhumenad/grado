@@ -35,6 +35,6 @@ class Student(model.Model, TimeStampModel):
         ordering = ['id']
 
     def __str__(self):
-        pass
+        return f"{self.stud_firstname} {self.stud_lastname}"
     
 

@@ -48,4 +48,4 @@ class Teacher(models.Model, TimeStampModel):
         ordering = ['id']
 
     def __str__(self):
-        return "%s" % (self.birth_date)
+        return f"{self.birth_date}"
