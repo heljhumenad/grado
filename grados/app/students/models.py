@@ -3,7 +3,7 @@ from django.utils.translation import gettext as _
 
 from grados.app.core.models import TimeStampModel
 from grados.app.teachers.models import Teacher
-from grados.app.parents.models import Parents
+from grados.app.parents.models import Parent
 
 # TODO: Create normalize table for students and teacher
 class Student(models.Model, TimeStampModel):
