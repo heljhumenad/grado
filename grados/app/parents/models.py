@@ -9,7 +9,7 @@ from grados.app.students.models import Student
 class Parent(models.Model, TimeStampModel):
 
     student_id = models.ForeignKey(
-        Students,
+        Student,
         on_delete = models.CASCADE,
         verbose_name = _('Students')
     )
@@ -41,13 +41,13 @@ class Parent(models.Model, TimeStampModel):
 
     address1 = models.CharField(
         max_length = 200,
-        verbose_name = _('Address 1')
+        verbose_name = _('Address 1'),
         blank = False
     )
 
     address2 = models.CharField(
         max_length = 200,
-        verbose_name = _('Address 2')
+        verbose_name = _('Address 2'),
         blank = False
     )
 
