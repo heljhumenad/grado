@@ -12,6 +12,24 @@ class Student(models.Model, TimeStampModel):
         on_delete = models.CASCADE,
         verbose_name = _('Students')
     )
+
+    first_name = models.CharField(
+        max_length = 200,
+        verbose_name = _('First Name'),
+        blank = False
+    )
+
+    last_name = models.CharField(
+        max_length = 200,
+        verbose_name = _('Last Name'),
+        blank = False
+    )
+
+    middle_name = models.CharField(
+        max_length = 200,
+        verbose_name = _('Middle Name'),
+        blank = False
+    )
     
     age = models.SmallIntegerField(
         verbose_name = _('Age'),
