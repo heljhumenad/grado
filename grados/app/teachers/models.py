@@ -38,7 +38,24 @@ class Teacher(models.Model, TimeStampModel):
         choices = LIFE_DESIGNATION,
         max_length = 50,
         verbose_name = _('Designation As.'),
+    )
 
+    profile_pic_id = models.CharField(
+        max_length = 50,
+        verbose_name = _('Upload profile picture'),
+        blank = False
+    )
+
+    role_of_work = models.CharField(
+        max_length = 200,
+        verbose_name = _('Role of Work'),
+        blank = False
+    )
+
+    teacher_status = models.CharField(
+        max_length = 200,
+        verbose_name = _('Status of Teacher'),
+        blank = False
     )
 
     class Meta:
