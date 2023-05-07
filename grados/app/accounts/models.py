@@ -26,11 +26,11 @@ class Role(models.Model, TimeStampModel):
 
 
     ROLE_NAME = (
-        ('Admin': 'Administrator'),
-        ('Parents': 'Parents'),
-        ('Teacher': 'Teacher'),
-        ('Editor': 'Editor'),
-        ('Approver': 'Approver'),
+        ('Admin', 'Administrator'),
+        ('Parents', 'Parents'),
+        ('Teacher', 'Teacher'),
+        ('Editor', 'Editor'),
+        ('Approver', 'Approver'),
 
     )
 
