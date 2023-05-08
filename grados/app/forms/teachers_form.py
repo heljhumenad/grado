@@ -13,7 +13,10 @@ class TeacherForms(forms.ModelForm):
             'address1',
             'address2',
             'birth_date',
-            'designation_as'
+            'designation_as',
+            'role_of_work',
+            'teacher_status',
+            'profile_pic_id',
         ]
         ordering = ['-id']
     
