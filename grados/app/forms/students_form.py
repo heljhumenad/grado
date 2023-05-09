@@ -3,7 +3,7 @@ from django.utils.translation import gettext as _
 
 from grados.app.students.models import Student
 from grados.app.teacher.models import Teacher
-
+from grados.app.configs.settings.grados_settings import MAX_AGE_LIMIT
 
 # TODO: Add models for students and create normalize table from it
 class StudentsForm(forms.ModelForm):
@@ -25,3 +25,14 @@ class StudentsForm(forms.ModelForm):
             'age'
         ]
         ordering = ['-id']
+
+    def clean_age(self):
+        cleaned_data = super().clean()
+        age = cleaned_data.get('age')
+
+        if int(age) <= MAX_AGE_LIMIT:
+            raise forms.ValidationError(
+                _('Age of %(age)s is not allowed to use'),
+                params = {'age': age},
+        )
+        return age
