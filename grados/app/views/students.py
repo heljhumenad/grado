@@ -17,5 +17,5 @@ class StudentCreateView(MessageMixins, CreateView):
     template_name = 'students/student_add.html'
     form_class = students_form.StudentForm
     message = 'added'
-    success_url = reverse_lazy('student:student_add')
+    success_url = reverse_lazy('student:students_index')
 
