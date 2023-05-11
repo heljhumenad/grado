@@ -63,14 +63,14 @@ class Parent(models.Model, TimeStampModel):
         blank = True
     )
 
-    emaill_address = models.CharField(
+    emaill_address = models.EmailField(
         max_length = 200,
         verbose_name = _('Email Address'),
         blank = False
     )
     # TODO: Check if this field is need to be Boolean Field 
     # TODO: What will be the design if the user will pick No as Legal Guardian
-    legal_guardian = models.CharField(
+    legal_guardian = models.BooleanField(
         max_length = 10,
         verbose_name = _('Legal Guardian'),
         blank = False
