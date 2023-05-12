@@ -1,12 +1,14 @@
 from django.utils.translation import gettext as _
-from djang.urls import reverse_lazy
+from django.urls import reverse_lazy
 from django.views.generic import (
-    TemplateView
+    TemplateView,
+    CreateView
 )
 
 from grados.app.students.models import Student
 from grados.app.mixin.messagemixin import MessageMixins
-from grados.app.forms.student_form import
+# TODO: make this standard importing for forms
+from grados.app.forms.students_form import StudentsForm
 
 
 class StudentsTemplateView(TemplateView):
@@ -15,7 +17,7 @@ class StudentsTemplateView(TemplateView):
 # TODO: add the student urls
 class StudentCreateView(MessageMixins, CreateView):
     template_name = 'students/student_add.html'
-    form_class = students_form.StudentForm
+    form_class = StudentsForm
     message = 'added'
     success_url = reverse_lazy('student:students_index')
 
