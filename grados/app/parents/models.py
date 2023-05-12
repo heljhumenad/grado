@@ -63,7 +63,7 @@ class Parent(models.Model, TimeStampModel):
         blank = True
     )
 
-    emaill_address = models.EmailField(
+    email_address = models.EmailField(
         max_length = 200,
         verbose_name = _('Email Address'),
         blank = False
