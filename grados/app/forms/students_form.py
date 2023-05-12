@@ -2,8 +2,8 @@ from django import forms
 from django.utils.translation import gettext as _
 
 from grados.app.students.models import Student
-from grados.app.teacher.models import Teacher
-from grados.app.configs.settings.grados_settings import MAX_AGE_LIMIT
+from grados.app.teachers.models import Teacher
+from grados.configs.settings.grados_settings import MAX_AGE_LIMIT
 
 # TODO: Add models for students and create normalize table from it
 class StudentsForm(forms.ModelForm):
