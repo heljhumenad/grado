@@ -7,5 +7,6 @@ urlpatterns = [
     path('teacher/', include('grados.app.teachers.urls')),
     path('accounts/', include('grados.app.accounts.urls')),
     path('students/', include('grados.app.students.urls')),
+    path('parents/', include('grados.app.parents.urls')),
     path("__debug__", include(debug_toolbar.urls)),  # Debug purposes
 ]
