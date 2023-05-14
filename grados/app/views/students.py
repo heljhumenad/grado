@@ -8,7 +8,7 @@ from django.views.generic import (
 from grados.app.students.models import Student
 from grados.app.mixin.messagemixin import MessageMixins
 # TODO: make this standard importing for forms
-from grados.app.forms.students_form import StudentsForm
+from grados.app.forms.form import StudentsForm
 
 
 class StudentsTemplateView(TemplateView):

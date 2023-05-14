@@ -7,7 +7,7 @@ from django.views.generic import (
 )
 
 from grados.app.teachers.models import Teacher
-from grados.app.forms import teachers_form
+from grados.app.forms.form import TeacherForms
 from grados.app.mixin.messagemixin import MessageMixins
 
 class TeachersTemplateView(MessageMixins, TemplateView):
@@ -16,7 +16,7 @@ class TeachersTemplateView(MessageMixins, TemplateView):
 
 class TeacherCreateView(MessageMixins, CreateView):
     template_name = 'teachers/add_teacher.html'
-    form_class = teachers_form.TeacherForms
+    form_class = TeacherForms
     messages = "added"
     success_url = reverse_lazy('teachers:teachers_add') # redirect and show messages
 

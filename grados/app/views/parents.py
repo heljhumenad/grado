@@ -6,7 +6,7 @@ from django.views.generic import (
     ListView
 )
 from grados.app.parents.models import Parent
-from grados.app.forms import parents_forms
+from grados.app.forms.form import ParentForms
 from grados.app.mixin.messagemixin import MessageMixins
 
 # TODO: Name standard for the template names for CRUD functionality
@@ -16,5 +16,5 @@ class ParentTemplateView(MessageMixins, TemplateView):
 
 class ParentCreateView(MessageMixins, CreateView):
     template_name = 'parents/add_parent.html'
-    form_class = parents_forms.ParentForms
+    form_class = ParentForms
     success_url = reverse_lazy('parents:parent_index')
