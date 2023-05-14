@@ -8,7 +8,7 @@ from django.views.generic import (
 from grados.app.students.models import Student
 from grados.app.mixin.messagemixin import MessageMixins
 # TODO: make this standard importing for forms
-from grados.app.forms.form import StudentsForm
+from grados.app.forms.form import StudentForm
 
 
 class StudentsTemplateView(TemplateView):
@@ -17,7 +17,7 @@ class StudentsTemplateView(TemplateView):
 # TODO: add the student urls
 class StudentCreateView(MessageMixins, CreateView):
     template_name = 'students/student_add.html'
-    form_class = StudentsForm
+    form_class = StudentForm
     message = 'added'
     success_url = reverse_lazy('student:students_index')
 
