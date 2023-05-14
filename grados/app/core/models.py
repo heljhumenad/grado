@@ -15,7 +15,6 @@ class TimeStampModel(models.DateTimeField):
         verbose_name = _('Updated At')
     )
 
-
 class BasicInfo(models.Model):
     class Meta:
         abstract = True

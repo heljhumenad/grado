@@ -3,13 +3,13 @@ from django.utils.translation import gettext as _
 
 from grados.app.core.models import (
     BasicInfo,
-    AddressInfo
+    AddressInfo,
+    TimeStampModel
 )
-from grados.app.core.models import TimeStampModel
 from grados.app.students.models import Student
 
 
-class Parent(TimeStampModel, BasicInfo, AddressInfo, ):
+class Parent(BasicInfo, AddressInfo, TimeStampModel):
 
     student_id = models.ForeignKey(
         Student,
