@@ -1,10 +1,11 @@
 from django.db import models
 from django.utils.translation import gettext as _
 
+from grados.app.core.models import AddressInfo
 from grados.app.core.models import TimeStampModel
 from grados.app.accounts.models import CustomUser
 
-class Teacher(models.Model, TimeStampModel):
+class Teacher(TimeStampModel, AddressInfo ):
 
     LIFE_DESIGNATION = (
         ('mr.', 'Mr.'),
@@ -16,18 +17,6 @@ class Teacher(models.Model, TimeStampModel):
         CustomUser,
         on_delete = models.CASCADE,
         verbose_name = _('Teacher Acccount')
-    )
-
-    address1 = models.CharField(
-        max_length = 200,
-        verbose_name = _('Address 1'),
-        blank = False,
-    )
-    
-    address2 = models.CharField(
-        max_length = 200,
-        verbose_name = _('Address 2'),
-        blank = False,
     )
 
     birth_date = models.DateField(

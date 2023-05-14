@@ -1,12 +1,15 @@
 from django.db import models
 from django.utils.translation import gettext as _
 
+from grados.app.core.models import (
+    BasicInfo,
+    AddressInfo
+)
 from grados.app.core.models import TimeStampModel
-from grados.app.accounts.models import CustomUser
 from grados.app.students.models import Student
 
 
-class Parent(models.Model, TimeStampModel):
+class Parent(TimeStampModel, BasicInfo, AddressInfo, ):
 
     student_id = models.ForeignKey(
         Student,
@@ -14,40 +17,9 @@ class Parent(models.Model, TimeStampModel):
         verbose_name = _('Students')
     )
 
-    first_name = models.CharField(
-        max_length = 200,
-        verbose_name = _('First Name'),
-        blank = False
-    )
-
-
-    last_name = models.CharField(
-        max_length = 200,
-        verbose_name = _('Last Name'),
-        blank = False
-    )
-
-    middle_name = models.CharField(
-        max_length = 200,
-        verbose_name = _('Middle Name'),
-        blank = False
-    )
-
     occupation = models.CharField(
         max_length = 200,
         verbose_name = _('Occupation'),
-        blank = False
-    )
-
-    address1 = models.CharField(
-        max_length = 200,
-        verbose_name = _('Address 1'),
-        blank = False
-    )
-
-    address2 = models.CharField(
-        max_length = 200,
-        verbose_name = _('Address 2'),
         blank = False
     )
 
@@ -75,7 +47,6 @@ class Parent(models.Model, TimeStampModel):
         verbose_name = _('Legal Guardian'),
         blank = False
     )
-
 
     class Meta:
         db_table = _('parents')
