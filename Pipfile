@@ -15,6 +15,7 @@ black = "*"
 django-compressor = "*"
 django-bootstrap5 = "*"
 werkzeug = "*"
+pre-commit = "*"
 
 [dev-packages]
 faker = "*"
