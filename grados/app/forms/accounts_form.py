@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 from django.utils.translation import gettext as _
 
+
 class CustomAuthenticationForm(AuthenticationForm):
 	error_messages = {
 		"invalid_login": "Username and Password doesnt recognize by the system",

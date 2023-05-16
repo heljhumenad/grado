@@ -1,11 +1,12 @@
 from django import forms
-from django.utils.translation import gettext as _
 from django.contrib.auth.forms import AuthenticationForm
+from django.utils.translation import gettext as _
 
 from grados.app.parents.models import Parent
-from grados.app.teachers.models import Teacher
 from grados.app.students.models import Student
+from grados.app.teachers.models import Teacher
 from grados.configs.settings.grados_settings import MAX_AGE_LIMIT
+
 
 class FormsForm(forms.ModelForm):
     '''

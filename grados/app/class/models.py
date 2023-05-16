@@ -1,8 +1,9 @@
 from django.db import models
 from django.utils.translation import gettext as _
 
-from grados.app.core.models import TimeStampModel
 from grados.app.accounts.models import CustomUser
+from grados.app.core.models import TimeStampModel
+
 # Create your models here.
 
 class StudentClass(models.Model, TimeStampModel):

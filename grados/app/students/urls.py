@@ -1,6 +1,6 @@
 from django.urls import path
-from grados.app.views import students
 
+from grados.app.views import students
 
 app_name = 'students'
 

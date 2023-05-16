@@ -1,14 +1,11 @@
-from django.utils.translation import gettext as _
 from django.urls import reverse_lazy
-from django.views.generic import (
-    TemplateView,
-    CreateView
-)
+from django.utils.translation import gettext as _
+from django.views.generic import CreateView, TemplateView
 
-from grados.app.students.models import Student
-from grados.app.mixin.messagemixin import MessageMixins
 # TODO: make this standard importing for forms
 from grados.app.forms.form import StudentForm
+from grados.app.mixin.messagemixin import MessageMixins
+from grados.app.students.models import Student
 
 
 class StudentsTemplateView(TemplateView):

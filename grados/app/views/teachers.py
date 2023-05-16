@@ -1,14 +1,11 @@
 from django.contrib.auth import views
 from django.urls import reverse_lazy
-from django.views.generic import (
-    TemplateView, 
-    CreateView,
-    UpdateView
-)
+from django.views.generic import CreateView, TemplateView, UpdateView
 
-from grados.app.teachers.models import Teacher
 from grados.app.forms.form import TeacherForms
 from grados.app.mixin.messagemixin import MessageMixins
+from grados.app.teachers.models import Teacher
+
 
 class TeachersTemplateView(MessageMixins, TemplateView):
     template_name = 'teachers/index.html'

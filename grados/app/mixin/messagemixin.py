@@ -1,5 +1,5 @@
-from django.utils.translation import gettext as _
 from django.contrib.messages.views import SuccessMessageMixin
+from django.utils.translation import gettext as _
 
 from grados.app.mixin.loginrequired import LoginRequiredMixins
 

@@ -5,7 +5,6 @@ from faker import Factory
 
 from grados.app.teachers.models import Teacher
 
-
 faker = Factory.create()
 
 # TODO: Add some faker data for this class

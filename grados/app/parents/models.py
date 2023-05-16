@@ -1,11 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext as _
 
-from grados.app.core.models import (
-    BasicInfo,
-    AddressInfo,
-    TimeStampModel
-)
+from grados.app.core.models import AddressInfo, BasicInfo, TimeStampModel
 from grados.app.students.models import Student
 
 

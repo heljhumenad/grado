@@ -1,13 +1,9 @@
 from django.urls import reverse_lazy
-from django.views.generic import (
-    TemplateView,
-    CreateView,
-    UpdateView,
-    ListView
-)
-from grados.app.parents.models import Parent
+from django.views.generic import CreateView, ListView, TemplateView, UpdateView
+
 from grados.app.forms.form import ParentForms
 from grados.app.mixin.messagemixin import MessageMixins
+from grados.app.parents.models import Parent
 
 # TODO: Name standard for the template names for CRUD functionality
 

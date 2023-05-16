@@ -1,4 +1,5 @@
 from django.urls import path
+
 from grados.app.views import parents
 
 app_name = 'parents'
