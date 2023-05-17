@@ -3,7 +3,6 @@
 *.db
 ./__pycache__/
 node_modules/
-CACHE\css\
 .vscode/*
 .idea/*
 .vimrc*
