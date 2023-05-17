@@ -11,6 +11,7 @@ class AccountTemplateView(views.LoginView):
     template_name = "accounts/login.html"
     authentication_form = CustomAuthenticationForm
 
+
 class AccountLogoutView(LoginRequiredMixin, views.LogoutView):
     template_name = "accounts/logout.html"
     login_url = reverse_lazy("accounts:accounts_login")

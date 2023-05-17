@@ -9,12 +9,12 @@ from grados.app.students.models import Student
 
 
 class StudentsTemplateView(TemplateView):
-    template_name = 'students/index.html'
+    template_name = "students/index.html"
+
 
 # TODO: add the student urls
 class StudentCreateView(MessageMixins, CreateView):
-    template_name = 'students/student_add.html'
+    template_name = "students/student_add.html"
     form_class = StudentForm
-    message = 'added'
-    success_url = reverse_lazy('student:students_index')
-
+    message = "added"
+    success_url = reverse_lazy("student:students_index")

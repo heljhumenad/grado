@@ -8,7 +8,6 @@ import grados.app.core.models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -17,20 +16,48 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Teacher',
+            name="Teacher",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('address1', models.CharField(max_length=200, verbose_name='Address 1')),
-                ('address2', models.CharField(max_length=200, verbose_name='Address 2')),
-                ('birth_date', models.DateField(verbose_name='Birth Date')),
-                ('designation_as', models.CharField(choices=[('mr.', 'Mr.'), ('mrs.', 'Mrs.'), ('ms.', 'Miss')], max_length=50, verbose_name='Designation As.')),
-                ('teacher_accounts_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='Teacher Acccount')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "address1",
+                    models.CharField(max_length=200, verbose_name="Address 1"),
+                ),
+                (
+                    "address2",
+                    models.CharField(max_length=200, verbose_name="Address 2"),
+                ),
+                ("birth_date", models.DateField(verbose_name="Birth Date")),
+                (
+                    "designation_as",
+                    models.CharField(
+                        choices=[("mr.", "Mr."), ("mrs.", "Mrs."), ("ms.", "Miss")],
+                        max_length=50,
+                        verbose_name="Designation As.",
+                    ),
+                ),
+                (
+                    "teacher_accounts_id",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                        verbose_name="Teacher Acccount",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Teacher',
-                'verbose_name_plural': 'Teachers',
-                'db_table': 'teachers',
-                'ordering': ['id'],
+                "verbose_name": "Teacher",
+                "verbose_name_plural": "Teachers",
+                "db_table": "teachers",
+                "ordering": ["id"],
             },
             bases=(models.Model, grados.app.core.models.TimeStampModel),
         ),

@@ -9,6 +9,8 @@ from grados.app.accounts.models import CustomUser
 class CustomUserAdmin(UserAdmin):
     model = get_user_model
     list_display = [
-        'first_name', 'last_name',
-        'email', 'username',
+        "first_name",
+        "last_name",
+        "email",
+        "username",
     ]

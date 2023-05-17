@@ -5,8 +5,8 @@ AUTH_USER_MODEL = "accounts.CustomUser"
 LOGIN_REDIRECT_URL = "accounts:dashboard_view"
 INSTALLED_APPS += [
     "django_extensions",
-    "debug_toolbar"
-] # Installed apps for dev environment
+    "debug_toolbar",
+]  # Installed apps for dev environment
 #  Handle debug toolbars internal ip address that link to localhost or 127.0.0.0.
 if DEBUG:
     INTERNAL_IPS = (
@@ -16,7 +16,7 @@ if DEBUG:
     MIDDLEWARE += [
         "debug_toolbar.middleware.DebugToolbarMiddleware",
     ]
-MIDDLEWARE += [] # Installed middleware for dev environment
+MIDDLEWARE += []  # Installed middleware for dev environment
 
 # DEBUG Toolbar Settings
 DEBUG_TOOLBAR_CONFIG = {
