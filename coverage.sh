@@ -1,1 +1,1 @@
-python -m http.server 8080 --bind=localhost
+coverage run manage.py test --keepdb --parallel
