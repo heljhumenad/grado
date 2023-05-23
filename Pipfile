@@ -16,6 +16,7 @@ django-compressor = "*"
 django-bootstrap5 = "*"
 werkzeug = "*"
 pre-commit = "*"
+sphinx = "*"
 
 [dev-packages]
 faker = "*"
