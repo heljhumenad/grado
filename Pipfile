@@ -17,6 +17,7 @@ django-bootstrap5 = "*"
 werkzeug = "*"
 pre-commit = "*"
 sphinx = "*"
+pillow = "*"
 
 [dev-packages]
 faker = "*"
