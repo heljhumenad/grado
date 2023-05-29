@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import gettext as _
 
 
-class TimeStampModel(models.DateTimeField):
+class GradoTimeStampModel(models.DateTimeField):
     class Meta:
         abstract = True
 
@@ -11,7 +11,7 @@ class TimeStampModel(models.DateTimeField):
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_("Updated At"))
 
 
-class BasicInfo(models.Model):
+class GradoBasicInfo(models.Model):
     class Meta:
         abstract = True
 
@@ -28,7 +28,7 @@ class BasicInfo(models.Model):
     )
 
 
-class AddressInfo(models.Model):
+class GradoAddressInfo(models.Model):
     class Meta:
         abstract = True
 

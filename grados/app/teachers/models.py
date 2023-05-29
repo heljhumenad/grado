@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import gettext as _
 
 from grados.app.accounts.models import CustomUser
-from grados.app.core.models import AddressInfo, TimeStampModel
+from grados.app.core.models import GradoAddressInfo, GradoTimeStampModel
 
 
 class Teacher(AddressInfo, TimeStampModel):

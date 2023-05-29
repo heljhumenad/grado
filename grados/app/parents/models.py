@@ -1,11 +1,11 @@
 from django.db import models
 from django.utils.translation import gettext as _
 
-from grados.app.core.models import AddressInfo, BasicInfo, TimeStampModel
+from grados.app.core.models import GradoAddressInfo, GradoBasicInfo, GradoTimeStampModel
 from grados.app.students.models import Student
 
 
-class Parent(BasicInfo, AddressInfo, TimeStampModel):
+class Parent(GradoBasicInfo, GradoAddressInfo, GradoTimeStampModel):
     student_id = models.ForeignKey(
         Student, on_delete=models.CASCADE, verbose_name=_("Students")
     )

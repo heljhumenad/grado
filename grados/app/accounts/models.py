@@ -2,7 +2,7 @@ from django.contrib.auth.models import AbstractUser, UserManager
 from django.db import models
 from django.utils.translation import gettext as _
 
-from grados.app.core.models import TimeStampModel
+from grados.app.core.models import GradoTimeStampModel
 
 
 class CustomUserManager(UserManager):
@@ -21,7 +21,7 @@ class CustomUser(AbstractUser):
         return self.email
 
 
-class Role(models.Model, TimeStampModel):
+class Role(models.Model, GradoTimeStampModel):
     class Meta:
         abstract = True
 

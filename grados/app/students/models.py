@@ -1,12 +1,12 @@
 from django.db import models
 from django.utils.translation import gettext as _
 
-from grados.app.core.models import BasicInfo, TimeStampModel
+from grados.app.core.models import GradoBasicInfo, GradoTimeStampModel
 from grados.app.teachers.models import Teacher
 
 
 # TODO: Create normalize table for students and teacher
-class Student(BasicInfo, TimeStampModel):
+class Student(GradoBasicInfo, GradoTimeStampModel):
     teacher_id = models.ForeignKey(
         Teacher, on_delete=models.CASCADE, verbose_name=_("Students")
     )
